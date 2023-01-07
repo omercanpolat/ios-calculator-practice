@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1.3rem;
+}
+
+body {
+  background-color: #222;
+  /* centering */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* GRID CONTAINER */
+
+div.grid-container {
+  width: fit-content;
+  margin: auto;
+  padding: 1.5rem;
+  background-color: #000;
+  border-radius: 3rem;
+  /* grid system */
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  /* columns */
+  grid-template-columns: repeat(4, 5rem);
+  /* rows */
+  grid-template-rows: repeat(7, 5rem);
+  /* grid gaps */
+  gap: 0.5rem;
+  /* grid template areas */
+  grid-template-areas:
+    "empty empty empty empty"
+    "empty empty empty empty"
+    "key1 key2 key3 key4"
+    "key5 key6 key7 key8"
+    "key9 key10 key11 key12"
+    "key13 key14 key15 key16"
+    "key-zero key-zero key19 key20";
+}
+
+/* GRID ITEMS */
+
+div.grid-container > div.grid-item-screen {
+  grid-area: empty;
+}
+
+div.grid-container > button.grid-item {
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 50%;
+}
+
+div.grid-container > button.grid-item:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+div.grid-container > button.grid-item-button-zero {
+  grid-area: key-zero;
+  border-radius: 3.5rem;
+  /* text align */
+  text-align: left;
+  padding-left: 2rem;
+}
+
+div.grid-container > button.btn-light {
+  background-color: #a5a5a5;
+  color: #000;
+}
+
+div.grid-container > button.btn-dark {
+  background-color: #333333;
+}
+
+div.grid-container > button.btn-orange {
+  background-color: #f1a33c;
+}
